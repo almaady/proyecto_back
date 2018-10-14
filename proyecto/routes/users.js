@@ -4,6 +4,7 @@ const path = require('path')
 const User = require('../models/User')
 const {verifyToken} =require('../helpers/jwt')
 
+
 router.put('/follow/:id', verifyToken, (req,res,next)=>{
     console.log(req.user)
     User.findOne({_id:req.user._id, following:req.params.id})

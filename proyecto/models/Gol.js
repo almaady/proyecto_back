@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose')
 const Schema = mongoose.Schema
 
-const partidoSchema = new Schema({
+const golSchema = new Schema({
 
   user:{
     type:Schema.Types.ObjectId,
@@ -12,9 +12,9 @@ const partidoSchema = new Schema({
   },
   equipo1:String,
   equipo2:String,
-  marcadorL:Number,
-  marcadorV:Number,
-  descripcion: String
+  jugador:String,
+  descripcion:String,
+  minuto:String,
 },{
   timestamps:{
     createdAt: 'created_at',
@@ -23,4 +23,4 @@ const partidoSchema = new Schema({
 })
 
 
-module.exports = mongoose.model('Partido', partidoSchema)
+module.exports = mongoose.model('Gol', golSchema)

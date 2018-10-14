@@ -12,7 +12,11 @@ const userSchema = new Schema({
   photoURL: String,
   partido:{
     type:Schema.Types.ObjectId,
-    ref="Partido"
+    ref:'Partido'
+  },
+  gol:{
+    type:Schema.Types.ObjectId,
+    ref:'Gol'
   },
   equipo: String,
   
