@@ -15,7 +15,7 @@ const {generateToken, verifyToken} = require ('../helpers/jwt')
 // })
 
 router.get('/partidos', (req, res)=>{
-  Partido.find({})
+  Partido.find().populate('user')
   .then(partidos=>res.status(201).json(partidos))
   .catch(e=>next(e))
 })
